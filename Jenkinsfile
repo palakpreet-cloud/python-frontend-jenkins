@@ -6,7 +6,7 @@ pipeline{
     stages{
         stage('git'){
             steps{
-                git url: 'https://github.com/palakpreet-cloud/python-frontend-jenkins.git', branch: 'main'
+                git url: 'https://github.com/palakpreet-cloud/python-frontend-jenkins.git', branch: 'main', credentialsId: 'pythonfrontendjenkinsfile'
             }
         }
         stage('install'){
