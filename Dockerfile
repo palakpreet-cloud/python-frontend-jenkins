@@ -1,9 +1,11 @@
-FROM python:3.12-slim
+FROM node:22-slim
 
 WORKDIR /app
 
 COPY . .
 
-RUN pip install -r requirements.txt
+RUN npm i
 
-CMD ["python","unified_main.py"]
+RUN npm run build
+
+CMD ["npm","start"]
