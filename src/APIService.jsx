@@ -124,16 +124,7 @@ class APIService {
         return axios.post(BASE_URL + "events/" + id + "/slots")
     }
 
-    //ANALYTICS
-    getBookingTrends(period) {
-        return axios.get(BASE_URL + `admin/charts/booking-trends`, {
-            params: { period },
-            headers: {
-                ...this.getToken(),
-                "ngrok-skip-browser-warning": "true"
-            }
-        });
-    }
+
 
     getEventPopularity(limit = 10) {
         return axios.get(BASE_URL + `admin/charts/event-popularity`, {
